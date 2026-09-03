@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZIDA AI VIDEO</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0f19;
+      color: white;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 25px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    textarea,
+    select,
+    button {
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 12px;
+      border: none;
+      font-size: 16px;
+    }
+
+    textarea {
+      height: 150px;
+      background: #171d2b;
+      color: white;
+    }
+
+    select {
+      background: #171d2b;
+      color: white;
+    }
+
+    button {
+      background: #16a34a;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 20px;
+      background: #171d2b;
+      border-radius: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🎬 ZIDA AI VIDEO</h1>
+
+    <p>Crée tes vidéos avec l'intelligence artificielle.</p>
+
+    <textarea id="prompt"
+      placeholder="Décris la vidéo que tu veux créer..."></textarea>
+
+    <select id="format">
+      <option value="9:16">📱 Vertical — 9:16</option>
+      <option value="16:9">🖥️ Paysage — 16:9</option>
+      <option value="1:1">⬜ Carré — 1:1</option>
+    </select>
+
+    <button onclick="creerVideo()">
+      🚀 CRÉER LA VIDÉO
+    </button>
+
+    <div class="result" id="result">
+      Ta vidéo apparaîtra ici.
+    </div>
+
+  </div>
+
+  <script>
+    function creerVideo() {
+      const prompt = document.getElementById("prompt").value;
+
+      if (prompt.trim() === "") {
+        document.getElementById("result").innerText =
+          "⚠️ Décris d'abord la vidéo que tu veux créer.";
+        return;
+      }
+
+      document.getElementById("result").innerText =
+        "🤖 Préparation de ta vidéo IA...";
+    }
+  </script>
+
+</body>
+</html>
